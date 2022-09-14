@@ -5,10 +5,12 @@ import PageObjects.LoginPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.io.IOException;
+
 public class TC_LoginPage_01 extends BaseClass {
 
     @Test
-    public void LoginTest()
+    public void LoginTest() throws IOException
     {
         LoginPage loginPage= new LoginPage(driver);
         driver.get(baseUrl);
@@ -27,6 +29,7 @@ public class TC_LoginPage_01 extends BaseClass {
         }
         else
         {
+            takeScreenShot(driver, "LoginTest");
             Assert.assertTrue(false);
             logger.warn("Login page not opened");
         }
