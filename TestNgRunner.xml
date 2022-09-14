@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 <suite name = "Single Thread All Test Cases">
+    
+    <listeners>
+        <listener class-name="Utilities.Reports"></listener>
+    </listeners>
+    
     <test name = "SwagLabs">
         <parameter name="browser" value="firefox" />
         <classes>
