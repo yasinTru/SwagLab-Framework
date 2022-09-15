@@ -9,7 +9,7 @@
     <test name = "SwagLabs">
         <parameter name="browser" value="firefox" />
         <classes>
-            <class name = "TestCases.TC_LoginPage_01" />
+            <class name = "TestCases.TC_LoginPageDDT_02" />
 
         </classes>
     </test>

@@ -33,7 +33,7 @@ public class XlUtils {
     }
 
 
-    public static int getCellCount(String xlfile,String xlsheet,int rownum) throws IOException
+    public static int getColumnCount(String xlfile,String xlsheet,int rownum) throws IOException
     {
         fi=new FileInputStream(xlfile);
         wb=new XSSFWorkbook(fi);

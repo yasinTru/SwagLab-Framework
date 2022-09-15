@@ -19,12 +19,14 @@ import org.testng.annotations.Parameters;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 public class BaseClass {
     ReadConfig readConfig= new ReadConfig();
     public String baseUrl= readConfig.getUrl();
     public String baseUsername= readConfig.getUsername();
     public String basePassword= readConfig.getPassword();
+
     public static WebDriver driver;
     public static Logger logger;
 
@@ -45,6 +47,8 @@ public class BaseClass {
             System.setProperty("webdriver.gecko.driver", readConfig.getFirefoxPath());
             driver = new FirefoxDriver();
         }
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+
         driver.get(baseUrl);
 
     }
